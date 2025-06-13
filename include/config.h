@@ -9,4 +9,19 @@
 #define TFTP_SERVER_PATH "/tmp/vesr-1.24.1-build1.firmware"
 #define TFTP_NAME "tftp://"
 
-#endif // CONFIG_H
+#define MAX_STR_LEN 256
+#define LOG_FILE "firmware_uploader.log"
+#define CONFIG_FILE "config.ini"
+
+typedef struct {
+    char router_ip[MAX_STR_LEN];
+    char router_user[MAX_STR_LEN];
+    char router_pass[MAX_STR_LEN];
+    char firmware_file[MAX_STR_LEN];
+    int dry_run;
+} UploadConfig;
+
+int load_config_from_ini(UploadConfig *cfg, const char *filename);
+void log_message(const char *format, ...);
+
+#endif  // CONFIG_H
