@@ -1,0 +1,9 @@
+2025-06-19 07:49:33 INFO: Starting update 192.168.56.101 via tftp
+2025-06-19 07:49:40 WARN: Copy output unexpected on 192.168.56.101: 
+********************************************
+*             Welcome to vESR              *
+********************************************
+
+ESR-1# copy tftp://192.168.56.1:/vesr-1.24.1-build1.firmware system:firmware[81D[76C
+error - File-mgr: Operation source path is busy.
+

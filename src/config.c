@@ -25,6 +25,14 @@ static int config_handler(void* user, const char* section, const char* name,
         c->firmware_file = strdup(value);
     } else if (strcmp(section, "tftp") == 0 && strcmp(name, "server_ip") == 0) {
         c->tftp_server_ip = strdup(value);
+    } else if (strcmp(section, "scp") == 0 && strcmp(name, "user") == 0) {
+        c->scp_user = strdup(value);
+    } else if (strcmp(section, "scp") == 0 && strcmp(name, "pass") == 0) {
+        c->scp_pass = strdup(value);
+    } else if (strcmp(section, "scp") == 0 && strcmp(name, "server_ip") == 0) {
+        c->scp_server_ip = strdup(value);
+    } else if (strcmp(section, "update") == 0 && strcmp(name, "method") == 0) {
+        c->method = strdup(value);
     }
     return 1;
 }

@@ -11,6 +11,10 @@ typedef struct {
     char *ssh_key_path;
     char *firmware_file;
     char *tftp_server_ip;
+    char *scp_user;
+    char *scp_pass;
+    char *scp_server_ip;
+    char *method;  // "tftp" или "scp"
 } Config;
 
 int load_config(const char *filename, Config *cfg);
